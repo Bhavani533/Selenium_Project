@@ -242,7 +242,7 @@ public class Teacher {
 			driver.findElement(By.id("logout_button")).click();
 			System.out.println("Student logged out");
 		 
-		 //sign up as a teacher
+		/* //sign up as a teacher
 		 driver.findElement(By.xpath("//*[text()=' Sign up! ']")).click();
 		 driver.findElement(By.xpath("//*[@id=\"status-group\"]/div[1]/div[2]")).click();
 		 driver.findElement(By.id("registration_firstname")).sendKeys("Teju");
@@ -256,7 +256,7 @@ public class Teacher {
 		 
 		 //logout
 		 driver.findElement(By.className("dropdown-toggle")).click();
-		 driver.findElement(By.id("logout_button")).click();
+		 driver.findElement(By.id("logout_button")).click();*/
 		 
 		 //login
 		 driver.findElement(By.id("login")).sendKeys("teju81");
@@ -397,18 +397,9 @@ public class Teacher {
 		 System.out.println(driver.findElement(By.cssSelector(".alert.alert-success")).getText());
 		 driver.findElement(By.cssSelector(".btn.btn-primary.btn-large")).click();
 		 
-		 //create a new course
-		 driver.findElement(By.xpath("//*[@title='My courses']")).click();
-		 JavascriptExecutor js12 = (JavascriptExecutor) driver;
-		 js12.executeScript("window.scrollBy(0,2000)");	
-		 driver.findElement(By.xpath("//*[text()='Create a course']")).click();
-		 
-		 //Add a new course
-		 driver.findElement(By.id("title")).sendKeys("Java tutorial 1");
-		 driver.findElement(By.id("add_course_submit")).click();
-		 
 		 //delete the course
-		 driver.findElement(By.linkText("Java tutorial 1")).click();
+		 driver.findElement(By.xpath("//*[@title='My courses']")).click();
+		 driver.findElement(By.linkText("Java Basics Tutorial3")).click();
 		 JavascriptExecutor js8 = (JavascriptExecutor) driver;
 		 js8.executeScript("window.scrollBy(0,2000)");
 		 
